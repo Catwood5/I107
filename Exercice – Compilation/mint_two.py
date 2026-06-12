@@ -44,9 +44,9 @@ for url in URLS:
                 pass
         except Exception as e:
             raise Exception(f"Image inaccessible : {img}\n→ {e}\n→ Corrige le champ 'image' du JSON ou pousse l'image !")
-        print(f"  ✅ {meta.get('name', '?')} — JSON et image OK")
+        print(f"{meta.get('name', '?')} — JSON et image OK")
     else:
-        print(f"  ✅ {url} accessible")
+        print(f"{url} accessible")
 
 # --- Connexion ---
 w3 = Web3(Web3.HTTPProvider(RPC_URL))
@@ -88,7 +88,7 @@ for i, url in enumerate(URLS, 1):
     if receipt.status == 0:
         raise Exception(f"Mint {i} revert — un require() du contrat a échoué")
     token_id = contract.events.Transfer().process_receipt(receipt, errors=DISCARD)[0]["args"]["tokenId"]
-    print(f"✅ Token ID {token_id} minté | bloc {receipt.blockNumber}")
+    print(f"Token ID {token_id} minté | bloc {receipt.blockNumber}")
     print("   Owner :", contract.functions.ownerOf(token_id).call())
     print("   URI   :", contract.functions.tokenURI(token_id).call())
 
