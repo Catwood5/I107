@@ -21,8 +21,8 @@ if not MY_ADDRESS or not PRIVATE_KEY:
 
 # Les deux NFT à minter
 URLS = [
-    "https://raw.githubusercontent.com/Catwood5/I107/refs/heads/main/%20Exercice-Fil-Rouge/NFT.json",
-    "https://raw.githubusercontent.com/Catwood5/I107/refs/heads/main/%20Exercice-Fil-Rouge/NFT2.json",
+    "https://raw.githubusercontent.com/Catwood5/I107/refs/heads/main/Exercice%20%E2%80%93%20Compilation/NFT.json",
+    "https://raw.githubusercontent.com/Catwood5/I107/refs/heads/main/Exercice%20%E2%80%93%20Compilation/NFT2.json",
 ]
 
 # --- Vérification des URLs AVANT de minter (l'URI est gravée à jamais) ---
